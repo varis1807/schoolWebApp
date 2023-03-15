@@ -36,6 +36,8 @@ public class StudentController {
         return ResponseEntity.ok(leaves);
     }
 
+
+
     @PostMapping("/fee")
     public ResponseEntity<?> payFee(@RequestBody Fee fee) {
         Fee newFee = feeRepository.save(fee);
