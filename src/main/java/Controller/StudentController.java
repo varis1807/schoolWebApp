@@ -41,7 +41,6 @@ public class StudentController {
         Fee newFee = feeRepository.save(fee);
         return ResponseEntity.ok(newFee);
     }
-
     @GetMapping("/fee")
     public ResponseEntity<?> getFees(@RequestParam Long studentId) {
         List<Fee> fees = feeRepository.findByStudentId(studentId);
